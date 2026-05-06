@@ -1,3 +1,5 @@
+import Dashboard from "./pages/Dashboard";
+import Clients from "./pages/Clients";
 import { Toaster } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import NotFound from "@/pages/NotFound";
@@ -6,8 +8,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 import { ThemeProvider } from "./contexts/ThemeContext";
 
 import Login from "./pages/Login";
-import Dashboard from "./pages/Dashboard";
-import Clients from "./pages/Clients";
+import Certifications from "./pages/Certifications";
 import Products from "./pages/Products";
 import Orders from "./pages/Orders";
 import Inventory from "./pages/Inventory";
@@ -81,7 +82,7 @@ function Router() {
       <Route path="/workshops" component={() => <PrivateRoute component={Workshops} />} />
       <Route path="/workshops/:id" component={() => <PrivateRoute component={WorkshopDetail} />} />
       <Route path="/social-impact" component={() => <PrivateRoute component={SocialImpact} />} />
-      <Route path="/settings" component={() => <PrivateRoute component={Settings} />} />
+      <Route path="/certifications" component={() => <PrivateRoute component={Certifications} />} />
 
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
